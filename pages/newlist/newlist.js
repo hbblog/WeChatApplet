@@ -7,11 +7,13 @@ Page({
   data: {
     topBars: [{
         id: 1,
-        name: "段子"
+        name: "段子",
+        url : "../newlist/newlist"
       },
       {
         id: 2,
-        name: "热图"
+        name: "热图",
+        url:"../Imglist/Imglist"
       },
       {
         id: 3,
@@ -75,7 +77,7 @@ Page({
   getNewsList() {
     var that = this;
     wx.request({
-      url: 'http://192.168.1.102:8081//',
+      url: 'http://192.168.1.102:8081/QBHappy/Index/0/1',
       success(res) {
         that.setData({
           newsList: res.data,

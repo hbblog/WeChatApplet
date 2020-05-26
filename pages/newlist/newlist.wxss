@@ -31,15 +31,15 @@
   color: red;
 }
 
-.type-pad navigator {
-  margin-left: 15px;
+ .type-pad navigator {
   font-size: 14px;
-  width:40px;  
+  width:50px; 
+  float: left;
 }
-
+/*
 .type-pad navigator.select {
   color: red;
-}
+} */
 
 .body {
   background-color: #f0f0f0;

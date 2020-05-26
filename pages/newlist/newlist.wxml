@@ -5,7 +5,9 @@
 
 <view class="type-pad">
 	<block wx:for="{{topBars}}" wx:key="id">
-		<text class="{{selectType==item.id?'select':''}}" bindtap="selectBar" data-typeid="{{item.id}}">{{item.name}}</text>
+		<navigator url="{{item.url}}" hover-class="navigator-hover">
+			<text class="{{selectType==item.id?'select':''}}" bindtap="selectBar" data-typeid="{{item.id}}">{{item.name}}</text>
+		</navigator>
 	</block>
 </view>
 

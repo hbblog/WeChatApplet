@@ -1,0 +1,25 @@
+<!--pages/imglist/imglist.wxml-->
+<view class="head">
+	<input type="text" placeholder="请输入要搜索的内容"></input>
+</view>
+
+<view class="type-pad">
+	<block wx:for="{{topBars}}" wx:key="id">
+		<navigator url="{{item.url}}" hover-class="navigator-hover">
+			<text class="{{selectType==item.id?'select':''}}" bindtap="selectBar" data-typeid="{{item.id}}">{{item.name}}</text>
+		</navigator>
+	</block>
+</view>
+
+<view class="body">
+	<view class="item" wx:for="{{newsList}}" wx:key="Id">
+		<view class="user-info">
+			<image src="{{item.HeadImgUrlDisk}}"></image>
+			<text class="user-name">{{item.Author}}</text>
+		</view>
+		<view class="title">
+			<text>{{item.Content}}</text>
+			<image src="{{item.ContentImg}}" mode="aspectFit"></image>
+		</view>
+	</view>
+</view>
